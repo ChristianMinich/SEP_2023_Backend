@@ -6,6 +6,7 @@ const singleton = require('./Server-Singleton');
 const express = require('express');
 const login = require('./routes/Login');
 const signup = require('./routes/Signup');
+const order = require('./routes/Order');
 
 const app = singleton.getInstance();
 //const db = singleton_db.getInstance();
@@ -40,6 +41,9 @@ app.post('/signup', signup.signup);
 app.get('*', (req, res) =>{
   res.send('404');
 })
+
+// ORDER POST
+app.post('/order', order.order);
 
 
 // Start the server
