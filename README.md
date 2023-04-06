@@ -13,3 +13,7 @@ npm install jsonwebtoken
 ```
 npm install bcrypt
 ```
+
+```
+npm install mariadb
+```
