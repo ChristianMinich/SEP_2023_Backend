@@ -29,4 +29,11 @@ export function validateOrder(token, time_stamp, employee_id, first_name, last_n
         {
             return false;
         }
+
+    // 2nd Option
+    const myObj = new Order_Object();
+
+    if(Object.values(myObj) !== null){
+        
+    }
 }
