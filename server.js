@@ -1,3 +1,4 @@
+const https = require('https');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const singleton = require('./Server-Singleton');
@@ -11,6 +12,11 @@ const app = singleton.getInstance();
 //const db = singleton_db.getInstance();
 
 app.use(express.json());
+
+// Start the server
+/*https.createServer(app).listen(3000, () =>{
+  console.log('Server started on port 3000');
+}); */
 
 app.get('/',(req, res) =>{
     res.sendFile(__dirname + '/index.html');
@@ -41,8 +47,6 @@ app.get('*', (req, res) =>{
   res.send('404');
 })
 
-
-// Start the server
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
+app.listen(3000, () =>{
+  console.log('server on 3000');
 });
