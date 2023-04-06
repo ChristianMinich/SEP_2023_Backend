@@ -5,5 +5,5 @@ CREATE TABLE Seller(
     house_number INT NOT NULL,
     zip_code INT NOT NULL,
     telephone_number INT NOT NULL,
-    e_mail NVARCHAR(320)
+    e_mail NVARCHAR(320) CHECK (e_mail LIKE '%@%')
 );
