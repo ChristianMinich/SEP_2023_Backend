@@ -3,6 +3,10 @@ College Project for the Course: Software Engineering Project
 
 ### Dependencies
 ```
+npm install
+```
+
+```
 npm install express
 ```
 
