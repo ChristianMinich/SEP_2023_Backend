@@ -3,7 +3,8 @@ const pool = mariadb.createPool({
      host: '127.0.0.1', 
      user:'root', 
      password: 'admin',
-     connectionLimit: 5
+     connectionLimit: 5,
+     database: 'server'
 });
 
 pool.getConnection()

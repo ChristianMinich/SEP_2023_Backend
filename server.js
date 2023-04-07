@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const singleton = require('./Server-Singleton');
-//const singleton_db = require('./DB-Singleton');
+const singleton_db = require('./DB-Singleton');
 
 const express = require('express');
 const login = require('./routes/Login');
@@ -20,7 +20,7 @@ app.get('/',(req, res) =>{
 });
 
 //
-//
+// Store Details
 //
 
 app.get('/store-details', details.store_details);
