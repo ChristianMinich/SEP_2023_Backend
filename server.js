@@ -44,7 +44,6 @@ app.get('/signup', (req, res) => {
   res.send('Please send your Signup Information!')
 })
 
-// Define the sign up endpoint
 app.post('/signup', signup.signup);
 
 //

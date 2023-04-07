@@ -1,5 +1,9 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+
+//
+// Not necessary
+// 
 exports.signup = function(req, res) {
 
     const users = [

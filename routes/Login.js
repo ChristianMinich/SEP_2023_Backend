@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
+//TODO: DB Implementation 
+
 exports.login = function(req, res) {
 
     const users = [
