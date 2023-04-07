@@ -1,4 +1,4 @@
-import { validateOrder } from "../Order-Validator";
+
 exports.order = function(req, res) {
     const { 
         token,

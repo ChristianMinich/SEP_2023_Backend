@@ -7,20 +7,27 @@ const express = require('express');
 const login = require('./routes/Login');
 const signup = require('./routes/Signup');
 const order = require('./routes/Order');
+const details = require('./routes/Store-Details');
 
 const app = singleton.getInstance();
 //const db = singleton_db.getInstance();
 
 app.use(express.json());
 
+// Default
 app.get('/',(req, res) =>{
     res.sendFile(__dirname + '/index.html');
 });
 
-//Hello World
-app.get('/hello', (req, res) => {
-    res.send('Hello World!');
-});
+//
+//
+//
+
+app.get('/store-details', details.store_details);
+
+//
+// Login
+//
 
 app.get('/login', (req, res) => {
   res.send('Please send your Login Information!')
@@ -29,6 +36,10 @@ app.get('/login', (req, res) => {
 // Define the login endpoint
 app.post('/login', login.login);
 
+//
+// Signup
+//
+
 app.get('/signup', (req, res) => {
   res.send('Please send your Signup Information!')
 })
@@ -36,13 +47,19 @@ app.get('/signup', (req, res) => {
 // Define the sign up endpoint
 app.post('/signup', signup.signup);
 
+//
 // 404 Not Found
+//
 
 app.get('*', (req, res) =>{
   res.send('404');
 })
 
+
+//
 // ORDER POST
+//
+
 app.post('/order', order.order);
 
 
