@@ -5,10 +5,10 @@ const mariadb = require('mariadb');
 class MariaDBSingleton {
   constructor() {
     this.pool = mariadb.createPool({
-      host: 'localhost',
-      user: 'username',
-      password: 'password',
-      database: 'myDatabase',
+      host: '127.0.0.1',
+      user: 'root',
+      password: 'admin',
+      database: 'server',
       connectionLimit: 10
     });
   }
