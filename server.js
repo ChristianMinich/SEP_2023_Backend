@@ -8,6 +8,7 @@ const login = require('./routes/Login');
 const signup = require('./routes/Signup');
 const order = require('./routes/Order');
 const details = require('./routes/Store-Details');
+const test = require('./routes/db-test');
 
 const app = singleton.getInstance();
 //const db = singleton_db.getInstance();
@@ -61,6 +62,7 @@ app.get('*', (req, res) =>{
 
 app.post('/order', order.order);
 
+app.get('/db', test.test);
 
 // Start the server
 app.listen(3000, () => {
