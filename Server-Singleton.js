@@ -1,5 +1,8 @@
 const express = require('express');
 
+/**
+ * 
+ */
 class Singleton {
     constructor() {
         throw new Error('Use Singleton.getInstance()');
