@@ -57,7 +57,7 @@ exports.login = function(req, res) {
 
   /**
    * If the User doesn't exist or the entered password is wrong
-   * @return {String} Status(401) and an error message 'Invalid username or password' as a Json.
+   * @return {*, String} Status(401) and an error message 'Invalid username or password' as a Json.
    */
   if (!user || !bcrypt.compareSync(password, user.password)) {
     return res.status(401).send({ message: 'Invalid username or password' });

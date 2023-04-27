@@ -3,7 +3,7 @@ const singleton_db = require('./DB-Singleton');
 
 const express = require('express');
 const login = require('./routes/Login');
-//const signup = require('./routes/Signup');
+const signup = require('./routes/Signup');
 const order = require('./routes/Order');
 const details = require('./routes/Store-Details');
 const getSettings = require('./routes/GetSettings');
