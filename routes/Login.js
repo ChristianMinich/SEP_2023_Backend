@@ -42,7 +42,7 @@ exports.login = function(req, res) {
       ];
 
   // Define a secret String for signing the JWT
-  const JWT_SECRET = 'secret';
+  const JWT_SECRET = 'SE2_kriegen_wir_in_einer_Woche_wieder';
 
   /**
    * Save Json-Variables inside Local JS-Variables

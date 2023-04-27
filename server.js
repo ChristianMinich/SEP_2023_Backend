@@ -6,7 +6,8 @@ const login = require('./routes/Login');
 //const signup = require('./routes/Signup');
 const order = require('./routes/Order');
 const details = require('./routes/Store-Details');
-const { settings } = require('./routes/Settings');
+const getSettings = require('./routes/getSettings');
+const setSettings = require('./routes/setSettings');
 
 const app = singleton.getInstance();
 
@@ -19,11 +20,7 @@ app.use(express.json());
 /**
  * Login
  */
-app.get('/login', (req, res) => {
-  res.send('Please send your Login Information!')
-})
 
-// Define the login endpoint
 app.post('/login', login.login);
 
 
@@ -65,7 +62,9 @@ app.get('/store-details', details.store_details);
 /**
  * Settings
  */
-//app.get('./routes/Settings.js', settings.settings);
+app.get('./routes/Settings.js', getSettings.settings);
+
+app.post('./routes/setSettings.js', setSettings.settings);
 
 /**
  * Starting Express Rest-API
