@@ -1,35 +1,24 @@
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
 const singleton = require('./Server-Singleton');
 const singleton_db = require('./DB-Singleton');
 
 const express = require('express');
 const login = require('./routes/Login');
-const signup = require('./routes/Signup');
+//const signup = require('./routes/Signup');
 const order = require('./routes/Order');
 const details = require('./routes/Store-Details');
-const test = require('./routes/db-test');
+const { settings } = require('./routes/Settings');
 
 const app = singleton.getInstance();
-//const db = singleton_db.getInstance();
 
+/**
+ * Using Middleware
+ */
 app.use(express.json());
 
-// Default
-app.get('/',(req, res) =>{
-    res.sendFile(__dirname + '/index.html');
-});
 
-//
-// Store Details
-//
-
-app.get('/store-details', details.store_details);
-
-//
-// Login
-//
-
+/**
+ * Login
+ */
 app.get('/login', (req, res) => {
   res.send('Please send your Login Information!')
 })
@@ -37,20 +26,22 @@ app.get('/login', (req, res) => {
 // Define the login endpoint
 app.post('/login', login.login);
 
-//
-// Signup
-//
 
+/**
+ * Signup
+ 
 app.get('/signup', (req, res) => {
   res.send('Please send your Signup Information!')
 })
 
 app.post('/signup', signup.signup);
 
-//
-// 404 Not Found
-//
+*/
 
+
+/**
+ * Default Setting
+ */
 app.get('*', (req, res) =>{
   res.send('404');
 })
@@ -60,11 +51,25 @@ app.get('*', (req, res) =>{
 // ORDER POST
 //
 
+/**
+ * Post Request to Order
+ */
 app.post('/order', order.order);
 
-app.get('/db', test.test);
 
-// Start the server
+/**
+ * Store-Details
+ */
+app.get('/store-details', details.store_details);
+
+/**
+ * Settings
+ */
+//app.get('./routes/Settings.js', settings.settings);
+
+/**
+ * Starting Express Rest-API
+ */
 app.listen(3000, () => {
   console.log('Server started on port 3000');
 });
