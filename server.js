@@ -6,9 +6,12 @@ const login = require('./routes/Login');
 //const signup = require('./routes/Signup');
 const order = require('./routes/Order');
 const details = require('./routes/Store-Details');
-const getSettings = require('./routes/getSettings');
-const setSettings = require('./routes/setSettings');
+const getSettings = require('./routes/GetSettings');
+const setSettings = require('./routes/SetSettings');
 
+/**
+ * Creating a single Instance of the Express Class
+ */
 const app = singleton.getInstance();
 
 /**
