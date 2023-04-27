@@ -1,4 +1,7 @@
 
+/**
+ * Creates an Order Object, which encludes all the Parameters needed to place an Order
+ */
 class Order_Object{
     constructor(token, time_stamp, employee_id, first_name, last_name, street, house_number, zip_code, number_of_packages, package_size, handling_info){
         this._token = token,

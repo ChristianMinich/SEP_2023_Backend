@@ -4,15 +4,15 @@ const bcrypt = require('bcryptjs');
 //TODO: DB Implementation 
 
 /**
- * This Function is being Accessed by sending a POST Request to '/login' it needs the Parameters
+ * This Function is being accessed by sending a POST request to '/login' it needs the parameters
  * @param {*} req.username and
- * @param {*} req.password to validate the Login Request.
+ * @param {*} req.password to validate the Login request.
  * 
  * @param {Integer} user.id
  * @param {String} JWT_SECRET
  * @param {String} expiresIn
  * 
- * @return {jwt, *, String} if Login Valid return jwt else return HTTP Statuscode and Error-Message
+ * @return {jwt, *, String} if Login valid return jwt else return HTTP statuscode and error-message
  * 
  * 
  */
@@ -42,10 +42,10 @@ exports.login = function(req, res) {
       ];
 
   // Define a secret String for signing the JWT
-  const JWT_SECRET = 'SE2_kriegen_wir_in_einer_Woche_wieder';
+  const JWT_SECRET = 'Lingen_Liefert_liefert_keine_Waffen_an_die_Ukraine';
 
   /**
-   * Save Json-Variables inside Local JS-Variables
+   * Save Json-Variables inside local JS-variables
    */
   const { username, password } = req.body;
 
@@ -56,16 +56,15 @@ exports.login = function(req, res) {
   const user = users.find(u => u.username === username);
 
   /**
-   * If the User doesn't exist or the entered Password is wrong
-   * return Status(401) and an Error Message 'Invalid username or password' as a Json.
-   * @return {String} 
+   * If the User doesn't exist or the entered password is wrong
+   * @return {String} Status(401) and an error message 'Invalid username or password' as a Json.
    */
   if (!user || !bcrypt.compareSync(password, user.password)) {
     return res.status(401).send({ message: 'Invalid username or password' });
   }
 
   /**
-   * If the Login was Successful return a JsonWebToken containing the Parameters
+   * If the Login was successful return a JsonWebToken containing the parameters
    * @param {Integer} user.id
    * @param {String} JWT_SECRET
    * @param {String} expiresIn

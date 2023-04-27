@@ -10,7 +10,7 @@ const getSettings = require('./routes/GetSettings');
 const setSettings = require('./routes/SetSettings');
 
 /**
- * Creating a single Instance of the Express Class
+ * Creating a single instance of the express class
  */
 const app = singleton.getInstance();
 
@@ -39,14 +39,6 @@ app.post('/signup', signup.signup);
 */
 
 
-/**
- * Default Setting
- */
-app.get('*', (req, res) =>{
-  res.send('404');
-})
-
-
 //
 // ORDER POST
 //
@@ -68,6 +60,13 @@ app.get('/store-details', details.store_details);
 app.get('./routes/Settings.js', getSettings.settings);
 
 app.post('./routes/setSettings.js', setSettings.settings);
+
+/**
+ * Default Setting
+ */
+app.get('*', (req, res) =>{
+  res.send('404');
+})
 
 /**
  * Starting Express Rest-API

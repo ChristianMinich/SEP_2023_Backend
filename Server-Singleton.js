@@ -1,7 +1,7 @@
 const express = require('express');
 
 /**
- * 
+ * Design Pattern Singleton enusures that there can only be one Instance of the Express Class
  */
 class Singleton {
     constructor() {
