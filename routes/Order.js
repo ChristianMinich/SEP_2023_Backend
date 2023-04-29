@@ -36,7 +36,7 @@ exports.order = function(req, res) {
         ) 
         {
             db.then(conn => {
-                conn.query('INSERT INTO ORDER1 VALUES (?, ?, ?, ?, ?, ?, ?)', [token, time_stamp, employee_id, 'M', "01-01-1900", "cdp", 5]);
+                conn.query('INSERT INTO ORDER1 VALUES (?, ?, ?, ?, ?, ?, ?)', [token, time_stamp, employee_id, 'M', "01-01-1900", "cdp", 124]);
             conn.end;
             res.status(200).send('Order successfully placed ' + token);
             });
