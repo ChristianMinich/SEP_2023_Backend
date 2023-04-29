@@ -5,3 +5,11 @@ CREATE TABLE Customer(
     house_number INT NOT NULL,
     zip_code INT NOT NULL
 );
+
+
+CREATE OR REPLACE TABLE USER(
+    user_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(50),
+
+    PRIMARY KEY (user_id)
+);
