@@ -11,6 +11,7 @@ const setSettings = require('./routes/SetSettings');
 const insert_store = require('./Database-Test/insert-store');
 const all_stores = require('./Database-Test/all-stores');
 const token_decoder = require('./Database-Test/token-decoder');
+const user = require('./Database-Test/test-user');
 
 /**
  * Creating a single instance of the express class
@@ -44,6 +45,7 @@ app.post('/signup', signup.signup);
 app.post('/insert-store', insert_store.store);
 app.get('/all-stores', all_stores.store);
 app.post('/token-decoder', token_decoder.decoder);
+app.post('/test-user', user.test);
 
 //
 // ORDER POST

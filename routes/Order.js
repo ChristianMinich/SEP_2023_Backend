@@ -38,8 +38,13 @@ exports.order = function(req, res) {
             db.then(conn => {
                 conn.query('INSERT INTO ORDER1 VALUES (?, ?, ?, ?, ?, ?, ?)', [token, time_stamp, employee_id, 'M', "01-01-1900", "cdp", 124]);
             conn.end;
-            res.status(200).send('Order successfully placed ' + token);
             });
+
+            db.then(conn => {
+                conn.query('INSERT INTO RECIPIENT VALUES (?, ?, ?, ?, ?, ?)', [token, first_name, last_name, street, house_number, zip_code]);
+                conn.end;
+                res.status(200).send('Order successfully placed ' + token);
+            })
             
             
         }
