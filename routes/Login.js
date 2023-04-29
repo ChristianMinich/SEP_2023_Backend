@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+const database = require('../DB-Singleton');
 
 //TODO: DB Implementation 
 
@@ -18,6 +19,7 @@ const bcrypt = require('bcryptjs');
  */
 exports.login = function(req, res) {
 
+    const db = database.getConnection();
     /**
      * Provisional Database
      */
@@ -59,9 +61,38 @@ exports.login = function(req, res) {
    * If the User doesn't exist or the entered password is wrong
    * @return {*, String} Status(401) and an error message 'Invalid username or password' as a Json.
    */
-  if (!user || !bcrypt.compareSync(password, user.password)) {
+  /*if (!user || !bcrypt.compareSync(password, user.password)) {
     return res.status(401).send({ message: 'Invalid username or password' });
-  }
+  } */
+
+  let store_id;
+  let store_name;
+  let pw;
+
+  db.then(conn => {
+    conn.query('SELECT STORE_ID, STORE_NAME, PASSWORD FROM STORE WHERE STORE_NAME = ? AND PASSWORD = ?', [username, password])
+    .then(rows => {
+      try{
+        if(rows.length !== 0){
+          store_id = rows[0].STORE_ID;
+          store_name = rows[0].STORE_NAME;
+          pw = rows[0].PASSWORD;
+          if(store_name === username && pw === password){
+            const token = jwt.sign({ id: store_id }, JWT_SECRET, { expiresIn: '1h' });
+            res.status(200).send({ token });
+          } else {
+            res.status(401).send({ message: 'Invalid username or password' });
+          } 
+        } else {
+          res.status(401).send({ message: 'Invalid username or password' });
+        } 
+      } catch (error){
+        console.log(error);
+        res.status(401).send({ message: 'Invalid username or password' });
+      }
+    });
+  });
+  //console.log(rows.STORE_NAME);
 
   /**
    * If the Login was successful return a JsonWebToken containing the parameters
@@ -69,6 +100,6 @@ exports.login = function(req, res) {
    * @param {String} JWT_SECRET
    * @param {String} expiresIn
    */
-  const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: '1h' });
-  res.send({ token });
+  /*const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: '1h' });
+  res.send({ token }); */
 }

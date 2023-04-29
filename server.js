@@ -8,6 +8,9 @@ const order = require('./routes/Order');
 const details = require('./routes/Store-Details');
 const getSettings = require('./routes/GetSettings');
 const setSettings = require('./routes/SetSettings');
+const insert_store = require('./Database-Test/insert-store');
+const all_stores = require('./Database-Test/all-stores');
+const token_decoder = require('./Database-Test/token-decoder');
 
 /**
  * Creating a single instance of the express class
@@ -38,6 +41,9 @@ app.post('/signup', signup.signup);
 
 */
 
+app.post('/insert-store', insert_store.store);
+app.get('/all-stores', all_stores.store);
+app.post('/token-decoder', token_decoder.decoder);
 
 //
 // ORDER POST
@@ -57,9 +63,9 @@ app.get('/store-details', details.store_details);
 /**
  * Settings
  */
-app.get('./routes/Settings.js', getSettings.settings);
+app.get('/settings', getSettings.settings);
 
-app.post('./routes/setSettings.js', setSettings.settings);
+app.post('/setSettings', setSettings.settings);
 
 /**
  * Default Setting
