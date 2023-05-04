@@ -8,7 +8,8 @@ exports.test = function(req, res) {
     db.then(conn => {
         conn.query('INSERT INTO USER (name) VALUES(?)', [name])
         .then(rows => {
+            console.log('INSERTED: ' + rows);
             res.status(200).send('Success');
-        })
+        }).catch(err);
     })
 }

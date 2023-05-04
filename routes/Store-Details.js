@@ -36,6 +36,22 @@ exports.store_details = function(req, res) {
 			longitude: 7.315843,
 			latitude: 52.522687
 		}
+	},
+	{
+		id: "LWT",
+		name: "Weltladen",
+		owner: "Lingen",
+		street: "Grosse Str.",
+		houseNumber: "4",
+		zip: "49808",
+		city: "Lingen",
+		telephone: "01234 567890",
+		email: "welt@laden.de",
+		logo: "https://cdn.shopify.com/s/files/1/0347/6792/9403/collections/24_1200x1200.png?v=1584600278",
+		coordinates: {
+			longitude: 7.315843,
+			latitude: 52.522687
+		}
 	}
 
 ]);

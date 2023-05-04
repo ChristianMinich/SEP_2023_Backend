@@ -8,7 +8,7 @@ CREATE TABLE Customer(
 
 
 CREATE OR REPLACE TABLE USER(
-    user_id INT NOT NULL AUTO_INCREMENT,
+    user_id INT AUTO_INCREMENT,
     name VARCHAR(50),
 
     PRIMARY KEY (user_id)
