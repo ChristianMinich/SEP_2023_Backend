@@ -1,4 +1,4 @@
-const database = require("../DB-Singleton");
+const database = require("../Database");
 
 exports.test = function (req, res) {
   const { name } = req.body;

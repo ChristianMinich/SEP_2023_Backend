@@ -1,4 +1,4 @@
-const database = require("../DB-Singleton");
+const database = require("../Database");
 exports.settings = function (req, res) {
   //TODO: Validate Request with JWT
 

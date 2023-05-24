@@ -1,4 +1,4 @@
-const database = require("../DB-Singleton");
+const database = require("../Database");
 const bcrypt = require("bcryptjs");
 
 exports.store = function (req, res) {

@@ -1,5 +1,5 @@
 const singleton = require("./Server-Singleton");
-const singleton_db = require("./DB-Singleton");
+const singleton_db = require("./Database");
 
 const express = require("express");
 const login = require("./routes/Login");

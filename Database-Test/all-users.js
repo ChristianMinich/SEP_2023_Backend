@@ -1,4 +1,4 @@
-const database = require("../DB-Singleton");
+const database = require("../Database");
 exports.user = function (req, res) {
   const db = database.getConnection();
 
