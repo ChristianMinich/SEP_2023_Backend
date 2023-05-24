@@ -1,15 +1,17 @@
-const database = require('../DB-Singleton');
+const database = require("../DB-Singleton");
 
-exports.test = function(req, res) {
-    const { name } = req.body; 
+exports.test = function (req, res) {
+  const { name } = req.body;
 
-    const db = database.getConnection();
+  const db = database.getConnection();
 
-    db.then(conn => {
-        conn.query('INSERT INTO USER (name) VALUES(?)', [name])
-        .then(rows => {
-            console.log('INSERTED: ' + rows);
-            res.status(200).send('Success');
-        }).catch(err);
-    })
-}
+  db.then((conn) => {
+    conn
+      .query("INSERT INTO USER (name) VALUES(?)", [name])
+      .then((rows) => {
+        console.log("INSERTED: " + rows);
+        res.status(200).send("Success");
+      })
+      .catch(err);
+  });
+};
