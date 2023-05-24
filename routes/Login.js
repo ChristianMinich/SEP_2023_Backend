@@ -22,33 +22,33 @@ exports.login = function (req, res) {
   /**
    * Provisional Database
    */
-  const users = [
-    {
-      id: 1,
-      username: "johndoe",
-      password: "$2a$10$5ll5d5RlKjDp1Ih20/P8f.WPm9XN7fsfjKzhlF8yv1cz6.1e6j/0W",
-    },
-    {
-      id: 2,
-      username: "buschermoehle",
-      password: "$2a$12$e39JUMVKh8/yiQP0UaiCw.9wtq7U2sPnotG.QtF0vh12femKWigqS",
-      /* {"username":"buschermoehle", "password": "despg"} */
-    },
-    {
-      id: 2,
-      username: "ryba",
-      password: "$2a$12$kpj43oOoBzvjuK6223S0wuYkCRhWbN4F1BSIqB/tZPSaR1hsU6stK",
-      /* {"username":"ryba", "password": "uml"} */
-    },
-  ];
+    const users = [
+        {
+            id: 1,
+            username: "johndoe",
+            password: "$2a$10$5ll5d5RlKjDp1Ih20/P8f.WPm9XN7fsfjKzhlF8yv1cz6.1e6j/0W",
+        },
+        {
+            id: 2,
+            username: "buschermoehle",
+            password: "$2a$12$e39JUMVKh8/yiQP0UaiCw.9wtq7U2sPnotG.QtF0vh12femKWigqS",
+            /* {"username":"buschermoehle", "password": "despg"} */
+        },
+        {
+            id: 2,
+            username: "ryba",
+            password: "$2a$12$kpj43oOoBzvjuK6223S0wuYkCRhWbN4F1BSIqB/tZPSaR1hsU6stK",
+            /* {"username":"ryba", "password": "uml"} */
+        },
+    ];
 
-  // Define a secret String for signing the JWT
-  const JWT_SECRET = "Lingen_Liefert_liefert_keine_Waffen_an_die_Ukraine";
+    // Define a secret String for signing the JWT
+    const JWT_SECRET = "Lingen_Liefert_liefert_keine_Waffen_an_die_Ukraine";
 
-  /**
+    /**
    * Save Json-Variables inside local JS-variables
    */
-  const { username, password } = req.body;
+    const { username, password } = req.body;
 
   /**
    * Find the user with the given username
