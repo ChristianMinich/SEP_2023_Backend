@@ -2,12 +2,12 @@ const database = require("../Database");
 const bcrypt = require("bcryptjs");
 
 exports.store = function (req, res) {
-  let hashedpassword;
+    let hashedpassword;
 
-  var { store_id, store_name, logo, phone_number, password } = req.body;
+    var { store_id, store_name, logo, phone_number, password } = req.body;
 
-  const db = database.getConnection();
-  /*
+    const db = database.getConnection();
+    /*
     bcrypt.genSalt(10)
     .then(salt => {
         return bcrypt.hash(password, salt);
@@ -26,24 +26,24 @@ exports.store = function (req, res) {
     {"store_id":"51463","store_name":"buschi","logo":"ifasa","phone_number":"246246","password":"dibnsdgg"}
     */
 
-  db.then((conn) => {
-    const res = conn
-      .query("INSERT INTO STORE VALUES (?, ?, ?, ?, ?)", [
-        store_id,
-        store_name,
-        logo,
-        phone_number,
-        String(hashedpassword),
-      ])
-      .then((response) => {
-        //console.log(response);
-      });
+    db.then((conn) => {
+        const res = conn
+            .query("INSERT INTO STORE VALUES (?, ?, ?, ?, ?)", [
+                store_id,
+                store_name,
+                logo,
+                phone_number,
+                String(hashedpassword),
+            ])
+            .then((response) => {
+                //console.log(response);
+            });
+
+        //console.log(res);
+        conn.end;
+    });
 
     //console.log(res);
-    conn.end;
-  });
 
-  //console.log(res);
-
-  res.status(200);
+    res.status(200);
 };

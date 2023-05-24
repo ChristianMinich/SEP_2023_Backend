@@ -1,18 +1,18 @@
-export function validateOrder(
-  token,
-  time_stamp,
-  employee_id,
-  first_name,
-  last_name,
-  street,
-  house_number,
-  zip_code,
-  number_of_packages,
-  package_size,
-  handling_info
+function validateOrder(
+    token,
+    time_stamp,
+    employee_id,
+    first_name,
+    last_name,
+    street,
+    house_number,
+    zip_code,
+    number_of_packages,
+    package_size,
+    handling_info
 ) {
-  if (
-    token !== null &&
+    if (
+        token !== null &&
     time_stamp !== null &&
     employee_id !== null &&
     first_name !== null &&
@@ -23,24 +23,25 @@ export function validateOrder(
     number_of_packages !== null &&
     package_size !== null &&
     handling_info !== null
-  ) {
-    if (1 === 1) {
-      // Token + TimeStep valid?
-      if (1 === 1) {
-        //
+    ) {
         if (1 === 1) {
-          //SQL Querys
-          return true;
+        // Token + TimeStep valid?
+            if (1 === 1) {
+            //
+                if (1 === 1) {
+                //SQL Querys
+                    return true;
+                }
+            }
         }
-      }
+    } else {
+        return false;
     }
-  } else {
-    return false;
-  }
 
-  // 2nd Option
-  const myObj = new Order_Object();
+    // 2nd Option
+    const myObj = new Order_Object();
 
-  if (Object.values(myObj) !== null) {
-  }
+    if (Object.values(myObj) !== null) {
+    }
 }
+module.exports = {validateOrder};
