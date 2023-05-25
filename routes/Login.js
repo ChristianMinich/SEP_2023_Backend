@@ -6,16 +6,11 @@ const database = require("../Database");
 
 /**
  * This Function is being accessed by sending a POST request to '/login' it needs the parameters
- * @param {*} req.username and
- * @param {*} req.password to validate the Login request.
+ * and uses the Username and Password to verify, whether or not a user login is valid
+ * @param {*} req.username
+ * @param {*} req.password
  *
- * @param {Integer} user.id
- * @param {String} JWT_SECRET
- * @param {String} expiresIn
- *
- * @return {jwt, *, String} if Login valid return jwt else return HTTP statuscode and error-message
- *
- *
+ * @return {jwt, *, String}
  */
 exports.login = function (req, res) {
     const db = database.getConnection();

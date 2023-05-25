@@ -72,3 +72,4 @@ class Order_Object {
         return this._handling_info;
     }
 }
+
