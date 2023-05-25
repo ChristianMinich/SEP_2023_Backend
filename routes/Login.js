@@ -1,8 +1,7 @@
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
+// const bcrypt = require("bcryptjs");
 const database = require("../Database");
 
-// TODO: DB Implementation
 
 /**
  * This Function is being accessed by sending a POST request to '/login' it needs the parameters
