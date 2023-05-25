@@ -4,12 +4,15 @@ const database = require("../Database");
 
 
 /**
- * This Function is being accessed by sending a POST request to '/login' it needs the parameters
- * and uses the Username and Password to verify, whether or not a user login is valid
- * @param {*} req.username
- * @param {*} req.password
+ * This Function is being accessed by sending
+ * a POST request to '/login'
+ * it needs the parameters
+ * Username and Password to verify,
+ * whether or not a user login is valid
+ * @param {*} req.username Username
+ * @param {*} req.password Password
  *
- * @return {jwt, *, String}
+ * @return {*} JsonWebToken
  */
 exports.login = function (req, res) {
     const db = database.getConnection();
