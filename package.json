@@ -16,7 +16,9 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.1.1"
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "jsdoc": "^4.0.2"
   },
   "scripts": {
     "jsdoc": "jsdoc -r -d docs jsdoc.config.json"

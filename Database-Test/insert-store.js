@@ -1,10 +1,16 @@
 const database = require("../Database");
 const bcrypt = require("bcryptjs");
 
-exports.store = function (req, res) {
+/**
+ * Function that inserts a new Store into the Database
+ * containing the Store Information inside the req.body.
+ * @param {*} req
+ * @param {*} res
+ */
+function store(req, res) {
     let hashedpassword;
 
-    var { store_id, store_name, logo, phone_number, password } = req.body;
+    const { store_id, store_name, logo, phone_number, password } = req.body;
 
     const db = database.getConnection();
     /*
@@ -19,10 +25,10 @@ exports.store = function (req, res) {
     .catch(err => {
         console.error(err);
     });
-    
+
     console.log(typeof hashedpassword);
-    console.log(hash); 
-    
+    console.log(hash);
+
     {"store_id":"51463","store_name":"buschi","logo":"ifasa","phone_number":"246246","password":"dibnsdgg"}
     */
 
@@ -36,14 +42,16 @@ exports.store = function (req, res) {
                 String(hashedpassword),
             ])
             .then((response) => {
-                //console.log(response);
+            // console.log(response);
             });
 
-        //console.log(res);
+        // console.log(res);
         conn.end;
     });
 
-    //console.log(res);
+    // console.log(res);
 
     res.status(200);
-};
+}
+
+module.exports = { store };

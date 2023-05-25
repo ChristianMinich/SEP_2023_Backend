@@ -8,7 +8,7 @@ class Singleton {
         throw new Error("Use Singleton.getInstance()");
     }
     static getInstance() {
-        if (!Singleton.instance) {
+        if (! Singleton.instance) {
             Singleton.instance = new express();
         }
         return Singleton.instance;

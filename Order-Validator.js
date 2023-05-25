@@ -25,16 +25,17 @@ function validateOrder(
     handling_info !== null
     ) {
         if (1 === 1) {
-        // Token + TimeStep valid?
+            // Token + TimeStep valid?
             if (1 === 1) {
             //
                 if (1 === 1) {
-                //SQL Querys
+                    // SQL Querys
                     return true;
                 }
             }
         }
-    } else {
+    }
+    else {
         return false;
     }
 
@@ -44,4 +45,4 @@ function validateOrder(
     if (Object.values(myObj) !== null) {
     }
 }
-module.exports = {validateOrder};
+module.exports = { validateOrder };

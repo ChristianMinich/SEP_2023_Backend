@@ -1,6 +1,12 @@
 const database = require("../Database");
 
-exports.test = function (req, res) {
+/**
+ * Function that inserts a single User into the Database
+ * with his name contained inside the req.body.
+ * @param {*} req
+ * @param {*} res
+ */
+function test(req, res) {
     const { name } = req.body;
 
     const db = database.getConnection();
@@ -16,4 +22,6 @@ exports.test = function (req, res) {
                 console.log(error);
             });
     });
-};
+}
+
+module.exports = { test };

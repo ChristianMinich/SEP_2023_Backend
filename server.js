@@ -32,7 +32,7 @@ app.post("/login", login.login);
 
 /**
  * Signup
- 
+
 app.get('/signup', (req, res) => {
   res.send('Please send your Signup Information!')
 })
@@ -45,7 +45,7 @@ app.post("/insert-store", insert_store.store);
 app.get("/all-stores", all_stores.store);
 app.post("/token-decoder", token_decoder.decoder);
 app.post("/test-user", user.test);
-app.get("/all-users"), all_user.user;
+app.get("/all-users", all_user.user);
 //
 // ORDER POST
 //
