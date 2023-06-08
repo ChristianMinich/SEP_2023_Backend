@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="258fb957-a8f1-4c04-a3a5-89f353d94352" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/E-Mail-Validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/E-Mail-Validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Qv59gXklPvFdvWGE7uBxwhYuNC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/devNew/webtech_project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;C:/devNew/SEP_2023_Backend/node_modules/jest&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\devNew\SEP_2023_Backend\services" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Jest.ValidateEmail.Invalid email: invalid format">
+    <configuration name="ValidateEmail (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/__tests__/services.test.js" />
+      <test-names>
+        <test-name value="ValidateEmail" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ValidateEmail" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/__tests__/E-Mail-Validator.test.js" />
+      <test-names>
+        <test-name value="ValidateEmail" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ValidateEmail.Invalid email: invalid format" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/__tests__/services.test.js" />
+      <test-names>
+        <test-name value="ValidateEmail" />
+        <test-name value="Invalid email: invalid format" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ValidateEmail.Valid email" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/__tests__/services.test.js" />
+      <test-names>
+        <test-name value="ValidateEmail" />
+        <test-name value="Valid email" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ValidateEmail.should return true for a valid email address" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/__tests__/E-Mail-Validator.test.js" />
+      <test-names>
+        <test-name value="ValidateEmail" />
+        <test-name value="should return true for a valid email address" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.ValidateEmail.Invalid email: invalid format" />
+        <item itemvalue="Jest.ValidateEmail (1)" />
+        <item itemvalue="Jest.ValidateEmail.Valid email" />
+        <item itemvalue="Jest.ValidateEmail" />
+        <item itemvalue="Jest.ValidateEmail.should return true for a valid email address" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="258fb957-a8f1-4c04-a3a5-89f353d94352" name="Changes" comment="" />
+      <created>1686221064388</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686221064388</updated>
+      <workItem from="1686221065617" duration="318000" />
+      <workItem from="1686221409467" duration="48000" />
+      <workItem from="1686221480447" duration="75000" />
+      <workItem from="1686221565032" duration="92000" />
+      <workItem from="1686221686741" duration="120000" />
+      <workItem from="1686221869519" duration="128000" />
+      <workItem from="1686222019786" duration="174000" />
+      <workItem from="1686222208612" duration="310000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

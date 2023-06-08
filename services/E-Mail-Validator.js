@@ -4,9 +4,9 @@
  * @returns {Boolean}
  */
 function ValidateEmail(email) {
-    const mailformat = '/^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/';
+    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    if(email.value.match(mailformat)) {
+    if(email != null && email.match(mailformat)) {
         return true;
     }
     else{
